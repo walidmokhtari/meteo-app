@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+.div__parent {
+    background-color: rgb(1, 74, 1);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div__child {
+    text-align: center;
+    width: 30%;
+    height: 100px;
+}
+
+.title {
+    font-size: 45px;
+    font-family: 'Rubik', sans-serif;
+    background: -webkit-linear-gradient(rgb(35, 154, 35), rgb(236, 234, 140));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.weather__form {
+    display: flex;
+    flex-direction: row;
+}
+
+.search__input {
+    padding: 15px; 
+    width: 100%;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: white; 
+}
+
+.weather__submit {
+    position: relative;
+    border: 1px solid rgb(236, 234, 140);
+    background-color: rgb(236, 234, 140);
+    color: white;
+    font-weight: bold;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+p {
+    color: red;
+}

@@ -1,0 +1,42 @@
+.today__card {
+    background-color: rgba(0, 128, 0, 0.729);
+    width: 30%;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.div__title {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.div__details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.p__data {
+    color: white;
+}
+
+.p__date {
+    color: white;
+    font-weight: 100;
+}
+
+.standard__card {
+    background-color: rgba(0, 128, 0, 0.729);
+    border-radius: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
