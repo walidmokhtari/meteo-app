@@ -11,7 +11,7 @@ function TodayCard(props) {
     const pressure = props?.data?.pressure
     const wind_speed = props?.data?.wind_speed
     //const dt = props.data.dt
-    console.log(props.data);
+    //console.log(props.data);
 
     return (
         <div className='today__card'>
