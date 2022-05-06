@@ -1,22 +1,21 @@
 import {React, useState, useEffect} from 'react'
-import {useRouter} from 'next/router'
 import meteoService from '../../services/meteo.service'
 import TodayCard from '../../components/todayCard'
 import StandardCard from '../../components/StandardCard'
+import Link from 'next/link'
 
 function Preventions(props) {
-    const router = useRouter()
 
     const [data, setData] = useState({})
-    console.log(data)
-
-    const townData = JSON.parse(router.query.data)
+    const [todayData, setTodayData] = useState({})
+    //console.log(router.query.lat)
 
     //const dateMs = new Date(1651748400000).toLocaleDateString('fr-FR', {weekday: "long", year: "numeric", month: "long", day: "numeric"})
-    
+
     useEffect(() => {
-        meteoService.getPreventions(townData.lat, townData.lon)
+        meteoService.getPreventions(localStorage.getItem('lat'), localStorage.getItem('lon'))
         .then((data) => {
+            setTodayData(data.data.daily[0])
             setData(data)
         })
         .catch((err) => {
@@ -26,16 +25,19 @@ function Preventions(props) {
   
 
     return (
-        <>
-            <TodayCard />
-            <br />
+        <div className='div__preventions'>
+            <div>
+                <Link href="/">Retour</Link>
+                <TodayCard data= {todayData}/>
+            </div>
+            <div className='div__standard__card'>
             {
-                data.data?.daily?.map((item) => (
-                    <StandardCard data= {item}/>
+                data.data?.daily?.map((item, index) => (
+                    index >= 1 && <StandardCard data= {item} key= {index}/>
                 ))
             }
-            
-        </>
+            </div>
+        </div>
     );
 }
 

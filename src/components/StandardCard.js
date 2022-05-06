@@ -3,21 +3,25 @@ import Image from 'next/image'
 
 function StandardCard(props) {
     
-    const date = new Date(props.data.dt * 1000).toLocaleDateString('fr-FR', {weekday: "long"})
+    const day = new Date(props.data.dt * 1000).toLocaleDateString('fr-FR', {weekday: "long"})
+    const month = new Date(props.data.dt * 1000).toLocaleDateString('fr-FR', { day: 'numeric', month: "long"})
+    const icon = `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@4x.png`
+    const temp = parseInt(props.data.temp.day)
 
+    //console.log(props.data)
     return (
         <div className='standard__card'>
             <Image 
-                    src="https://openweathermap.org/img/wn/10d@4x.png"
+                    src={icon}
                     alt="Picture of the author"
                     width={100}
                     height={100} 
             />
-            <div>
-                <h2>{date}</h2>
-                <p className='p__date'></p>
+            <div className='div__date'>
+                <p className='p__day'>{day}</p>
+                <p className='p__month'>{month}</p>
             </div>
-            <h1>30°C</h1>
+            <h1>{temp}°C</h1>
         </div>
     );
 }

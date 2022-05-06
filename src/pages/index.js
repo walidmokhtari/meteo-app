@@ -19,9 +19,10 @@ function index(props) {
           setError(true)
           return
         } else {
+          localStorage.setItem('lat', data.data[0].lat)
+          localStorage.setItem('lon', data.data[0].lon)
           router.push({
-            pathname: "/preventions",
-            query: { data: JSON.stringify({lat: data.data[0].lat, lon: data.data[0].lon})},
+            pathname: "/preventions"
           });
           setError(false)
         }
@@ -46,7 +47,7 @@ function index(props) {
             <input type="submit" className='weather__submit' onClick={(e) => handleSubmit(e)}/> 
         </div>
           {
-            error && <p>Aucune ville n&apos;existe sous ce nom</p>
+            error && <p className='p__error'>Aucune ville n&apos;existe sous ce nom</p>
           }
       </div>
     </div>

@@ -1,8 +1,21 @@
+.div__preventions {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(239, 239, 239, 0.89),rgba(229, 229, 229, 0.582), rgba(235, 233, 233, 0.986)),url(https://cdn.sortiraparis.com/images/1001/83517/577986-visuel-paris-velo-quai.jpg) no-repeat ;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .today__card {
-    background-color: rgba(0, 128, 0, 0.729);
-    width: 30%;
+    background-color: rgba(1, 78, 1, 0.729);
+    width: 100%;
     border-radius: 10px;
-    padding-bottom: 30px;
+    height: 30%;
+    margin-top: 70%;
+    margin-left: 3%;
+    padding: 20px;
 }
 
 .div__title {
@@ -20,19 +33,43 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.p__data {
-    color: white;
+.div__date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.p__date {
+.p__data {
+    font-weight: bold;
+}
+
+.p__day {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.p__month {
     color: white;
     font-weight: 100;
+    margin-top: -5px;
+}
+
+.div__preventions {
+    flex-grow: 1;
+}
+
+.div__standard__card {
+    width: 25%;
+    margin-right: 3%;
 }
 
 .standard__card {
-    background-color: rgba(0, 128, 0, 0.729);
+    background-color: rgb(1, 78, 1);
     border-radius: 10px;
-    width: 30%;
+    width: 100%;
+    height: 90px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
