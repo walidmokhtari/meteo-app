@@ -1,4 +1,6 @@
 @import url("./Home.module.css");
 @import url("./Preventions.module.css");
 
-
+body {
+    margin: 0;
+}
