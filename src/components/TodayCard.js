@@ -10,11 +10,10 @@ function TodayCard(props) {
     const humidity = props?.data?.humidity
     const pressure = props?.data?.pressure
     const wind_speed = props?.data?.wind_speed
-    //const dt = props.data.dt
-    //console.log(props.data);
+
 
     return (
-        <div className='today__card'>
+        <div className='today__card' >
             <div className='div__title'>
                 <Image 
                     src="https://openweathermap.org/img/wn/10d@4x.png"

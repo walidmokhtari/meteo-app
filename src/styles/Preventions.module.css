@@ -13,9 +13,7 @@
     width: 100%;
     border-radius: 10px;
     height: 30%;
-    margin-top: 70%;
-    margin-left: 3%;
-    padding: 20px;
+    margin-top: 80%;
 }
 
 .div__title {
@@ -56,13 +54,9 @@
     margin-top: -5px;
 }
 
-.div__preventions {
-    flex-grow: 1;
-}
 
 .div__standard__card {
     width: 25%;
-    margin-right: 3%;
 }
 
 .standard__card {
@@ -76,4 +70,23 @@
     justify-content: space-between;
     color: white;
     font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 800px){
+    .div__preventions {
+        background: linear-gradient(rgba(239, 239, 239, 0.89),rgba(229, 229, 229, 0.582), rgba(235, 233, 233, 0.986)),url(https://cdn.sortiraparis.com/images/1001/83517/577986-visuel-paris-velo-quai.jpg) no-repeat ;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .div__standard__card {
+        width: 100%;
+    }
+
+    .today__card {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 }

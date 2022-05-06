@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+
+
 .div__parent {
     background-color: rgb(1, 74, 1);
     height: 100vh;
@@ -23,6 +25,7 @@
     -webkit-text-fill-color: transparent;
 }
 
+
 .weather__form {
     display: flex;
     flex-direction: row;
@@ -38,6 +41,7 @@
 }
 
 .weather__submit {
+    cursor: pointer;
     position: relative;
     border: 1px solid rgb(236, 234, 140);
     background-color: rgb(236, 234, 140);
@@ -49,4 +53,16 @@
 
 .p__error {
     color: red;
+}
+
+@media screen and (max-width: 800px){
+    .title {
+        font-size: 20px;
+    }
+    
+    .div__child {
+        text-align: center;
+        width: 80%;
+        height: 100px;
+    }
 }
