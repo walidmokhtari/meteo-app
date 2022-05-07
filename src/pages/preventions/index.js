@@ -8,9 +8,6 @@ function Preventions(props) {
 
     const [data, setData] = useState({})
     const [todayData, setTodayData] = useState({})
-    //console.log(router.query.lat)
-
-    //const dateMs = new Date(1651748400000).toLocaleDateString('fr-FR', {weekday: "long", year: "numeric", month: "long", day: "numeric"})
 
     useEffect(() => {
         meteoService.getPreventions(localStorage.getItem('lat'), localStorage.getItem('lon'))
@@ -23,7 +20,6 @@ function Preventions(props) {
         })
     }, [])
   
-
     return (
         <div className='div__preventions'>
             <div>
@@ -33,7 +29,7 @@ function Preventions(props) {
             <div className='div__standard__card'>
             {
                 data.data?.daily?.map((item, index) => (
-                    index >= 1 && <StandardCard data= {item} key= {index}/>
+                    index >= 1 && <StandardCard data= {item} key= {index} setTodayData= {setTodayData}/>
                 ))
             }
             </div>
@@ -42,10 +38,3 @@ function Preventions(props) {
 }
 
 export default Preventions;
-
-/* {
-                data.data.daily.map((item) => {
-                    <h1>{item.dt}</h1>
-                })
-            }
-            <h1>{data.data?.daily[0].dt}</h1>*/

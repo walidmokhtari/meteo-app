@@ -10,10 +10,11 @@
 
 .today__card {
     background-color: rgba(1, 78, 1, 0.729);
-    width: 100%;
+    width: 500px;
+    height: 250px;
     border-radius: 10px;
-    height: 30%;
     margin-top: 80%;
+    margin-left: 3%;
 }
 
 .div__title {
@@ -57,9 +58,12 @@
 
 .div__standard__card {
     width: 25%;
+    margin-top: 3%;
+    margin-right: 3%;
 }
 
 .standard__card {
+    cursor: pointer;
     background-color: rgb(1, 78, 1);
     border-radius: 10px;
     width: 100%;
@@ -88,5 +92,7 @@
     .today__card {
         margin-bottom: 20px;
         margin-top: 20px;
+        margin-left: 0px;
+        width: 100%;
     }
 }

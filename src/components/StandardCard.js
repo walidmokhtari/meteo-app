@@ -2,15 +2,19 @@ import React from 'react'
 import Image from 'next/image'
 
 function StandardCard(props) {
-    
+
     const day = new Date(props.data.dt * 1000).toLocaleDateString('fr-FR', {weekday: "long"})
     const month = new Date(props.data.dt * 1000).toLocaleDateString('fr-FR', { day: 'numeric', month: "long"})
     const icon = `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@4x.png`
     const temp = parseInt(props.data.temp.day)
 
+    const handleClick = () => {
+        props.setTodayData(props.data)
+    }
+
     //console.log(props.data)
     return (
-        <div className='standard__card'>
+        <div className='standard__card' onClick={() => handleClick()}>
             <Image 
                     src={icon}
                     alt="Picture of the author"
