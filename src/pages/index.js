@@ -11,16 +11,15 @@ function index(props) {
   const handleSubmit = (e) => {
 
     e.preventDefault()
-
     meteoService.getTown(town)
       .then((data) => {
     
-        if (data.data.length == 0) {
+        if (data.data.length == 0 || data.data.error) {
           setError(true)
           return
         } else {
-          localStorage.setItem('lat', data.data[0].lat)
-          localStorage.setItem('lon', data.data[0].lon)
+          localStorage.setItem('lat', data.data.lat)
+          localStorage.setItem('lon', data.data.lon)
           router.push({
             pathname: "/preventions"
           });

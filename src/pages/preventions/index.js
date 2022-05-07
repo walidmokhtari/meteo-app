@@ -12,7 +12,7 @@ function Preventions(props) {
     useEffect(() => {
         meteoService.getPreventions(localStorage.getItem('lat'), localStorage.getItem('lon'))
         .then((data) => {
-            setTodayData(data.data.daily[0])
+            setTodayData(data.data[0])
             setData(data)
         })
         .catch((err) => {
@@ -28,7 +28,7 @@ function Preventions(props) {
             </div>
             <div className='div__standard__card'>
             {
-                data.data?.daily?.map((item, index) => (
+                data.data?.map((item, index) => (
                     index >= 1 && <StandardCard data= {item} key= {index} setTodayData= {setTodayData}/>
                 ))
             }
