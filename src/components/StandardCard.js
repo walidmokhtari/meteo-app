@@ -9,10 +9,9 @@ function StandardCard(props) {
     const temp = parseInt(props.data.temp.day)
 
     const handleClick = () => {
-        props.setTodayData(props.data)
+        props.updateMainCard(props.index)
     }
 
-    //console.log(props.data)
     return (
         <div className='standard__card' onClick={() => handleClick()}>
             <Image 

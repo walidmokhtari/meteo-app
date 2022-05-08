@@ -21,7 +21,7 @@ function index(props) {
           localStorage.setItem('lat', data.data.lat)
           localStorage.setItem('lon', data.data.lon)
           router.push({
-            pathname: "/preventions"
+            pathname: "/forecast"
           });
           setError(false)
         }

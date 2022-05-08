@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-function TodayCard(props) {
+function MainCard(props) {
     
-    const date = new Date(props.data.dt * 1000).toLocaleDateString('fr-FR', {weekday: "long",  day: "numeric", month: "long"})
+    const date = props.data.dt ? new Date(props.data.dt * 1000).toLocaleDateString('fr-FR', {weekday: "long",  day: "numeric", month: "long"}) : 'Loading ...'
     const tempDay = props?.data?.temp?.day
     const tempNeight = props?.data?.temp?.night
     const humidity = props?.data?.humidity
@@ -12,7 +12,7 @@ function TodayCard(props) {
     const wind_speed = props?.data?.wind_speed
 
     return (
-        <div className='today__card' >
+        <div className='main__card' >
             <div className='div__title'>
                 <Image 
                     src="https://openweathermap.org/img/wn/10d@4x.png"
@@ -37,4 +37,4 @@ function TodayCard(props) {
     );
 }
 
-export default TodayCard;
+export default MainCard;
